@@ -1,0 +1,14 @@
+{
+  "name": "release-it-test",
+  "version": "0.1.0",
+  "main": "index.js",
+  "scripts": {
+    "release": "release-it"
+  },
+  "repository": "https://github.com/sshrik/release-it-test.git",
+  "author": "sshrik <chj878194@naver.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "release-it": "^17.0.3"
+  }
+}
