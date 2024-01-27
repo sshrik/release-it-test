@@ -16,6 +16,11 @@ jobs:
           fetch-depth: 2
       - run: git checkout HEAD
       
+      - name: git config
+        run: |
+          git config user.name "${GITHUB_ACTOR}"
+          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+
       - name: Cache yarn install
         uses: actions/setup-node@v3
         with:
@@ -26,3 +31,5 @@ jobs:
       
       - name: 🛫 Release it
         run: yarn release --ci
+        env: 
+          RELEASE_TOKEN: ${{ secrets.RELEASE_TOKEN }}
